@@ -8,21 +8,21 @@ RESTful APIs should be hypermedia driven. Clients should be expected to discover
 
 It is recommended to include a link to the URL for the resource itself. Links can be grouped together under one field or they can be individual fields in the resource representation. For example:
 
-  {
-      "name": "hello world",
-      "childrenUrl": "url",
-      "_self": "url"
-  }
+{
+    "name": "hello world",
+    "childrenUrl": "url",
+    "_self": "url"
+}
 
-  OR
+OR
 
-  {
-      "resourceName": "hello world",
-      "links": {
-          "children": "url",
-          "_self": "url"
-      }
-  }
+{
+    "resourceName": "hello world",
+    "links": {
+        "children": "url",
+        "_self": "url"
+    }
+}
 
 A well-behaved server should not change URLs for related resources between versions so clients can bookmark them should they wish to. However, a well-behaved client should be able to re-discover a URL from the initial well-known URLs if a bookmarked URL is no longer valid.
 
@@ -46,11 +46,11 @@ When mapping a command to a HTTP verb, it is recommended to choose the proper ve
 
 Here’s an example of a request:
 
-  POST /Entities
-  Content-Type: application/vnd.AddEntityCommand.v1+json
-  {
-      "name": "hello world"
-  }
+POST /Entities
+Content-Type: application/vnd.AddEntityCommand.v1+json
+{
+    "name": "hello world"
+}
 
 ## 4- Optimistic Concurrency Control with Etags 
 
