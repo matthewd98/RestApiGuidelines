@@ -55,3 +55,7 @@ Content-Type: application/vnd.AddEntityCommand.v1+json
 ## 4- Optimistic Concurrency Control with Etags 
 
 Servers should always return an ETag in the response to a GET request. If a server supports ETags it must also honor the If-Match header on PUT and PATCH requests. Servers which support ETags should also support If-None-Match for GET or HEAD methods. 
+
+## 5- Pagination
+
+Endpoints returning a collection of results should always include paging to limit the amount of data in the response. There are 2 pagination schemes: (1) cursor and (2) offset.
