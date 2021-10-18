@@ -36,7 +36,7 @@ Media type names should have the following format: application/vnd.myname.v1+jso
 
 The server should use a unique media type for each different representation of a resource. This means that GET and POST operations for the same resource should have different media types as they usually have different representations. PUT operations will generally have the same media type as their GET operation counterparts.
 
-When a client makes a request, they should specify a an accept header for the representation they are expecting to receive back. If the header value isn’t specified, or an inexistant or generic media type is specified, e.g. application/json, then the server can choose which representation to return or can respond with a 406 (Not Acceptable) error code. The server will always respond with a content type header value when it returns a response with a body. Clients are always expected to verify the content type header value before de-serializing the response’s body.
+When a client makes a request, they should specify an accept header for the representation they are expecting to receive back. If the header value isn’t specified, or an inexistant or generic media type is specified, e.g. application/json, then the server can choose which representation to return or can respond with a 406 (Not Acceptable) error code. The server will always respond with a content type header value when it returns a response with a body. Clients are always expected to verify the content type header value before de-serializing the response’s body.
 
 ## 3- Exposing CQRS (if applicable)
 
