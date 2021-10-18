@@ -1,6 +1,6 @@
-# RestApiGuidelines
+# REST API Guidelines
 
-REST API Guidelines
+These are some REST API guidelines I think are important to follow.
 
 ## 1- Hypermedia driven
 
